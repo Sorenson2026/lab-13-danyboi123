@@ -14,7 +14,8 @@ void swap(int &num1, int &num2);
 //main integer, drive program for vector sorting and display
 int main()
 {
-
+	//pretty colors
+	system("color b1");
 	//greeting
 	cout << "This program demonstrates a bubble sort on a integer vector!" << endl << endl;
 	//create vector
