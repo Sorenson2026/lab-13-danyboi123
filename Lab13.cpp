@@ -14,6 +14,7 @@ void swap(int &num1, int &num2);
 //main integer, drive program for vector sorting and display
 int main()
 {
+
 	//greeting
 	cout << "This program demonstrates a bubble sort on a integer vector!" << endl << endl;
 	//create vector
@@ -53,11 +54,22 @@ void bubbleSort(vector<int>& numbers)
 	//loop for outputing each pass
 	for (c = 0; c < 24; c++)
 	{
+		bool bIsSorted = true;
+
 		//one sorting pass
 		for (i = 0; i < 24; i++)
 		{
 			if (numbers[i + 1] < numbers[i])
+			{
 				swap(numbers[i + 1], numbers[i]);
+				bIsSorted = false;
+			}
+		}
+
+		if (bIsSorted)
+		{
+			cout << "List is sorted!" << endl;
+			return;
 		}
 		//output the pass
 		cout << "Pass #" << setw(2) << left << c + 1 << ":   ";
